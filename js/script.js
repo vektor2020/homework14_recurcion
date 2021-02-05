@@ -2,11 +2,11 @@
 function between(item, arr, start, end){
     toSort(arr);
     let midle = Math.floor((start + end) / 2);
-    if(item > midle){
+    if(item > arr[midle]){
         return between(item, arr, midle + 1, end);
-    }else if(item < midle) {
+    }else if(item < arr[midle]) {
         return between(item,arr, start, midle + 1);
-    }else if(item == midle){
+    }else if(item == arr[midle]){
         return true;
     }else{
         return false;
